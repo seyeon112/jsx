@@ -1,6 +1,6 @@
 // 모든 컴포넌트에게 적용되어야 할 스타일이 정의된 파일
 import { createGlobalStyle } from "styled-components";
-import reset = from 'styled-reset';
+// import reset = from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
 ${reset}
@@ -24,8 +24,36 @@ ${reset}
 
   }
 
+  const shapeCSS = {
+    :default : css``,
+    small : css`
+      border-radius: 10px;
+      `,
+
+      :large : css`
+      border-radius: 20px;
+      `,
+
+    big : css`
+      border-radius: 30px;
+      `,
+
+     
+    round : css`
+      border-radius: 50%;
+      `,
+  }
+
+  const Button = styled.button`
+    ${({variant}) => variantCSS[variant]};
+    ${({shape}) => variantCSS[shape]};
+
+  body {
+    line-height: 1.3;
+  }
   button {
     cursor: pointer;
+    border: none;
   }
 
   `;

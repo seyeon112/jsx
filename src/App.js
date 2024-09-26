@@ -6,7 +6,8 @@ import theme from "./global/theme";
 import Homeicon from "./pages/home/Homeicon";
 import PowButton from "./pages/home/PowButton";
 import CharContainer from "./docs/day04/context/basic/CharContainer";
-import ParentContainer from "./docs/day04/context/basic/ParentContainer";
+import ParentContainer from "./docs/day04/context/basic/normal/ParentContainer";
+import AnimalsContainer from "./docs/day04/context/basic/expert/AnimalsContainer";
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     <>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <ParentContainer/>
+      <AnimalsContainer />
     </ThemeProvider>
     </>
   );

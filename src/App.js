@@ -8,14 +8,19 @@ import PowButton from "./pages/home/PowButton";
 import CharContainer from "./docs/day04/context/basic/CharContainer";
 import ParentContainer from "./docs/day04/context/basic/normal/ParentContainer";
 import AnimalsContainer from "./docs/day04/context/basic/expert/AnimalsContainer";
+import CountContainer from "./docs/day05/redux/count/CountContainer";
+import FontContainer from "./docs/day05/redux/font/FontContainer";
+import { Form } from "./docs/day05/form/Form";
+// import Counter from "./docs/day05/redux/count/Counter";
 
 
 function App() {
   return (
     <>
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <AnimalsContainer />
+      {/* <Counter/> */}
+      {/* <FontContainer/> */}
+      <Form/>
     </ThemeProvider>
     </>
   );

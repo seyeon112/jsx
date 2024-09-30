@@ -11,16 +11,18 @@ import AnimalsContainer from "./docs/day04/context/basic/expert/AnimalsContainer
 import CountContainer from "./docs/day05/redux/count/CountContainer";
 import FontContainer from "./docs/day05/redux/font/FontContainer";
 import { Form } from "./docs/day05/form/Form";
+import { Route, RouterProvider, Routes } from "react-router-dom";
+import Job from "./pages/intro/Job";
 // import Counter from "./docs/day05/redux/count/Counter";
+
 
 
 function App() {
   return (
     <>
     <ThemeProvider theme={theme}>
-      {/* <Counter/> */}
-      {/* <FontContainer/> */}
-      <Form/>
+      <GlobalStyle />
+      <RouterProvider router={router}/>
     </ThemeProvider>
     </>
   );

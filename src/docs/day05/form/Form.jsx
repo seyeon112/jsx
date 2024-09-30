@@ -13,6 +13,8 @@ const Form = () => {
   // 비구조화 할당
 
 
+
+
   const {register, handleSubmit, getValues, formState: {isSubmitting, isSubmitted, errors}} = useForm({mode : "onChange"});
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[!@#])[\da-zA-Z!@#]{8,}$/;
@@ -142,5 +144,41 @@ const Form = () => {
     </form>
   );
 };
+
+
+//DELETE
+//요청경로 http://localhost:4000/user/2
+
+function del() {
+  fetch(`http://localhost:4000/user/2/${user.id}`, {
+    method: "DELETE",
+  });
+}
+
+
+//UPDATE 
+//http://lovalhost:400/user/2
+
+if(window.confirm('정말 업데이트 하시겠습니까?')){
+  fetch(`http://localhost:4000/user/2`, {
+    method : 'PUT',
+    headers : {
+      'Content-Type' : "application/json"
+    },
+    body : JSON.stringify({
+      ...data
+    })
+  }).then((response) => {
+    if(!response.ok){ return console.log(`Error ${response}`)}
+    console.log("업데이트가 완료되었습니다.")
+  })
+}
+
+
+//모든 검증된 데이터를 백으로 보내기만 하면 됨, 프론트는 - 보내고, 받고만 잘하면 됨
+//나머지는 자바에서 구현. 
+
+
+
 
 export default Form;

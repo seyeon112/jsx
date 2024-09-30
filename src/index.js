@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//라우터 코드 추가
+import { BrowserRouter } from 'react-router-dom';
 
 //리덕스 코드 추가 
 import {Provider, provider } from 'react-redux';
@@ -21,7 +23,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <Provider store={store}>
+    
        <App />
+       
     </Provider>
    
   </>
